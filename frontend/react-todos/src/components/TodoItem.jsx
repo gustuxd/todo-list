@@ -34,6 +34,7 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
         <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag">
           {todo.title}
         </Tag>
+        {todo.description}
       </div>
     </List.Item>
   );
