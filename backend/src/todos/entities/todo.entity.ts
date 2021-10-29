@@ -10,4 +10,7 @@ export class Todo {
 
     @Column()
     completed: boolean;
+
+    @Column()
+    description: string | null;
 }

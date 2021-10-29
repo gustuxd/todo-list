@@ -17,6 +17,7 @@ export const createTodo = (todo) => {
     body: JSON.stringify({
       title: todo.title,
       completed: todo.completed,
+      description: todo.description
     }),
   }).then((res) => res.json());
 };
