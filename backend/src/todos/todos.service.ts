@@ -21,13 +21,13 @@ export class TodosService {
   }
 
   async findOne(id: number): Promise<Todo> {
-    return this.todoRepository.findOne(id);
+    return this.todoRepository.findOneBy({id});
   }
 
   async update(id: number, updateTodoDto: UpdateTodoDto): Promise<Todo> {
     try {
       await this.todoRepository.update(id, updateTodoDto);
-      return this.todoRepository.findOne(id);
+      return this.todoRepository.findOneBy({id});
     } catch (error) {
       return error;
     }
